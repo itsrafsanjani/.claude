@@ -1,9 +1,5 @@
 {
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.sh",
-    "padding": 1
-  },
+  "model": "claude-opus-4-6",
   "env": {
     "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1"
   },
@@ -11,11 +7,27 @@
     "commit": "",
     "pr": ""
   },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 1
+  },
+  "enabledPlugins": {
+    "warp@claude-code-warp": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "php-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-warp": {
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
+      }
+    }
+  },
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
-  "enabledPlugins": {
-    "php-lspp@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "swift-lsp@claude-plugins-official": true
-  }
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
 }
