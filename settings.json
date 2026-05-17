@@ -1,5 +1,4 @@
 {
-  "model": "claude-opus-4-6",
   "env": {
     "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1"
   },
@@ -13,21 +12,25 @@
     "padding": 1
   },
   "enabledPlugins": {
-    "warp@claude-code-warp": true,
     "typescript-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
-    "php-lsp@claude-plugins-official": true
+    "php-lsp@claude-plugins-official": true,
+    "coderabbit@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "warp@claude-code-warp": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
       "source": {
         "source": "github",
-        "repo": "warpdotdev/claude-code-warp"
+        "repo": "itsrafsanjani/claude-code-warp"
       }
     }
   },
+  "effortLevel": "xhigh",
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "tui": "fullscreen"
 }
