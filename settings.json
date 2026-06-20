@@ -1,11 +1,11 @@
 {
   "env": {
-    "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1",
-    "CLAUDE_CODE_NO_FLICKER": "1"
+    "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1"
   },
   "attribution": {
     "commit": "",
-    "pr": ""
+    "pr": "",
+    "sessionUrl": false
   },
   "statusLine": {
     "type": "command",
@@ -24,14 +24,23 @@
     "claude-code-warp": {
       "source": {
         "source": "github",
-        "repo": "itsrafsanjani/claude-code-warp"
+        "repo": "warpdotdev/claude-code-warp"
       }
     }
   },
-  "effortLevel": "xhigh",
+  "effortLevel": "high",
+  "voice": {
+    "enabled": false,
+    "mode": "hold"
+  },
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
+  "theme": "auto",
+  "editorMode": "normal",
+  "verbose": true,
+  "remoteControlAtStartup": true,
+  "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "tui": "fullscreen"
+  "voiceEnabled": false
 }
