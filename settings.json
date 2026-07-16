@@ -1,7 +1,4 @@
 {
-  "env": {
-    "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1"
-  },
   "attribution": {
     "commit": "",
     "pr": "",
@@ -17,14 +14,21 @@
     "swift-lsp@claude-plugins-official": true,
     "php-lsp@claude-plugins-official": true,
     "coderabbit@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
-    "warp@claude-code-warp": true
+    "playwright@claude-plugins-official": false,
+    "warp@claude-code-warp": true,
+    "plannotator@plannotator": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
       "source": {
         "source": "github",
         "repo": "warpdotdev/claude-code-warp"
+      }
+    },
+    "plannotator": {
+      "source": {
+        "source": "github",
+        "repo": "backnotprop/plannotator"
       }
     }
   },
@@ -38,7 +42,8 @@
   "theme": "auto",
   "editorMode": "normal",
   "verbose": true,
-  "remoteControlAtStartup": true,
+  "preferredNotifChannel": "auto",
+  "switchModelsOnFlag": false,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
