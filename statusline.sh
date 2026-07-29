@@ -1,22 +1,25 @@
 #!/bin/zsh
 # Comprehensive Claude Code statusline - all available fields except worktree
-# Uses Nerd Font icons (requires a Nerd Font in your terminal)
+# Uses emoji icons (no Nerd Font required - works across terminal apps)
 input=$(cat)
 
 # Colors
 CYAN='\033[36m'; GREEN='\033[32m'; YELLOW='\033[33m'; RED='\033[31m'
 DIM='\033[2m'; BOLD='\033[1m'; MAGENTA='\033[35m'; BLUE='\033[34m'; RESET='\033[0m'
 
-# Nerd Font icons
-ICO_FOLDER=$'\uf07b'       # nf-fa-folder
-ICO_BRANCH=$'\ue725'       # nf-dev-git_branch
-ICO_DOLLAR=$'\uf155'       # nf-fa-dollar
-ICO_CLOCK=$'\uf017'        # nf-fa-clock
-ICO_CODE=$'\uf121'         # nf-fa-code
-ICO_WARN=$'\uf071'         # nf-fa-warning
-ICO_TAG=$'\uf02b'          # nf-fa-tag
-ICO_PLUS=$'\uf067'         # nf-fa-plus
-ICO_MINUS=$'\uf068'        # nf-fa-minus
+# Emoji icons. Written as zsh \U escapes rather than raw bytes so the file stays
+# pure ASCII and survives any editor/transfer. Only codepoints with default emoji
+# presentation are used (no U+FE0F variation selectors), so glyph widths stay
+# consistent across terminal emulators.
+ICO_FOLDER=$'\U0001F4C1'   # file folder
+ICO_BRANCH=$'\U0001F33F'   # herb (git branch)
+ICO_DOLLAR=$'\U0001F4B0'   # money bag
+ICO_CLOCK=$'\U000023F0'    # alarm clock
+ICO_CODE=$'\U0001F916'     # robot (agent)
+ICO_WARN=$'\U0001F6A8'     # rotating light
+ICO_TAG=$'\U0001F4CC'      # pushpin (session name)
+ICO_PLUS='+'               # ASCII - narrow glyph reads better next to a number
+ICO_MINUS='-'              # ASCII
 
 # --- Extract all fields ---
 MODEL_ID=$(echo "$input" | jq -r '.model.id // "unknown"')
