@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
   "attribution": {
     "commit": "",
     "pr": "",
@@ -12,11 +15,9 @@
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
-    "php-lsp@claude-plugins-official": true,
     "coderabbit@claude-plugins-official": true,
-    "playwright@claude-plugins-official": false,
-    "warp@claude-code-warp": true,
-    "plannotator@plannotator": true
+    "playwright@claude-plugins-official": true,
+    "warp@claude-code-warp": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
@@ -24,21 +25,15 @@
         "source": "github",
         "repo": "warpdotdev/claude-code-warp"
       }
-    },
-    "plannotator": {
-      "source": {
-        "source": "github",
-        "repo": "backnotprop/plannotator"
-      }
     }
   },
-  "effortLevel": "high",
   "voice": {
     "enabled": false,
     "mode": "hold"
   },
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
   "theme": "auto",
   "editorMode": "normal",
   "verbose": true,
@@ -47,5 +42,8 @@
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": false
+  "voiceEnabled": false,
+  "permissions": {
+    "defaultMode": "auto"
+  }
 }
