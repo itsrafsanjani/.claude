@@ -1,12 +1,14 @@
 {
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  },
   "attribution": {
     "commit": "",
     "pr": "",
     "sessionUrl": false
   },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "opus",
+  "enableArtifact": false,
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh",
@@ -16,8 +18,7 @@
     "typescript-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
     "coderabbit@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
-    "warp@claude-code-warp": true
+    "playwright@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
@@ -27,6 +28,18 @@
       }
     }
   },
+  "outputStyle": "Concise",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "xhigh"
+    },
+    "claude-fable-5-1": {
+      "effortLevel": "high"
+    }
+  },
+  "advisorModel": "fable",
+  "promptSuggestionEnabled": false,
+  "askUserQuestionTimeout": "never",
   "voice": {
     "enabled": false,
     "mode": "hold"
@@ -39,11 +52,12 @@
   "verbose": true,
   "preferredNotifChannel": "auto",
   "switchModelsOnFlag": false,
+  "teammateMode": "in-process",
+  "remoteControlAtStartup": false,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
   "voiceEnabled": false,
-  "permissions": {
-    "defaultMode": "auto"
-  }
+  "autoUpdatesChannel": "stable",
+  "minimumVersion": "2.1.304"
 }
